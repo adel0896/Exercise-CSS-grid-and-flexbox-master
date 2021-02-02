@@ -1,0 +1,43 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+main {
+  font-family: Avenir, Roboto, Helvetica, san-serif;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Keep adding new columns - even if theres is no content for them. content does not always take up full width */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr) ;
+  ); /* Don't add more columns than theres is content for. && +content "always" take full width */
+  grid-gap: 1rem;
+}
+body {
+  padding: 2rem;
+}
+article {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid black;
+  border-radius: 3rem;
+  padding: 1rem;
+  /* justify-content: space-between; */
+}
+
+article button {
+  background: teal;
+  order: 1;
+  margin-top: auto;
+  border-radius: 3rem;
+  margin: 1rem;
+}
+img {
+  order: -1;
+  align-self: center;
+}
